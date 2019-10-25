@@ -1,0 +1,291 @@
+/*=============================================================
+fonts
+=============================================================*/
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700,900&display=swap');
+
+
+/*=============================================================
+html and body
+=============================================================*/
+body {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 65px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 45px;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 16px;
+    text-transform: capitalize;
+
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #a1a1a1
+}
+
+button {
+    outline: none !important;
+}
+
+.btn {
+    white-space: inherit;
+}
+
+input,
+textarea {
+    outline: none;
+    resize: none;
+    border-bottom: 1px solid #DDDDDD;
+
+}
+
+textarea {
+    outline: none;
+    resize: none;
+    line-height: 12px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #b2b2b2;
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+
+a:hover,
+a:active {
+    color: #FEBA2D;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+
+::placeholder {
+    color: #b2b2b2;
+    text-transform: capitalize;
+}
+
+::-moz-placeholder {
+    color: #b2b2b2;
+    text-transform: capitalize;
+}
+
+:-ms-input-placeholder {
+    color: #b2b2b2;
+    text-transform: capitalize;
+}
+
+::-webkit-input-placeholder {
+    color: #b2b2b2;
+    text-transform: capitalize;
+}
+
+/*============= styles ===================*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom:
+}
+
+/* Margin Top bottom */
+
+.mt-20 {
+    margin-top: 20px
+}
+
+.mt-30 {
+    margin-top: 30px
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mtb-20-30 {
+    margin: 20px 0 30px;
+}
+
+.mtb-20-0 {
+    margin: 20px 0;
+}
+
+/* Pading Top bottom */
+
+
+.pt-10 {
+    padding-top: 10px
+}
+
+
+.pt-15 {
+    padding-top: 15px
+}
+
+
+.pt-20 {
+    padding-top: 20px
+}
+
+
+.pt-30 {
+    padding-top: 30px
+}
+
+
+
+.pt-40 {
+    padding-top: 40px
+}
+
+
+
+.pt-50 {
+    padding-top: 50px
+}
+
+
+
+.pt-60 {
+    padding-top: 60px
+}
+
+.pt-60 {
+    padding-top: 60px
+}
+
+.p-10 {
+    padding: 10px
+}
+
+.p-20 {
+    padding: 20px
+}
+
+.p-30 {
+    padding: 30px
+}
+
+.p-40 {
+    padding: 40px
+}
+
+.p-50 {
+    padding: 50px
+}
+
+.p-50 {
+    padding: 60px
+}
+
+.pt-pb-10 {
+    padding: 10px 0;
+}
+
+.pt-pb-20 {
+    padding: 20px 0;
+}
+
+.pt-pb-40 {
+    padding: 30px 0;
+}
+
+.pt-pb-50 {
+    padding: 50px 0;
+}
+
+.pt-pb-60 {
+    padding: 60px 0;
+}
+
+.pt-pb-70 {
+    padding: 70px 0;
+}
+
+.pt-pb-80 {
+    padding: 80px 0;
+}
+
+.pt-pb-90 {
+    padding: 90px 0;
+}
+
+.pt-pb-100 {
+    padding: 100px 0;
+}
+
+/**/

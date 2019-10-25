@@ -1,0 +1,598 @@
+.container {
+    max-width: 1200px
+}
+
+/*================= 1.1 Header Area ===============*/
+header.header-area {
+    background: #ffffff none repeat scroll 0 0;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 991px) {
+    .main-nav {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        border-radius: 50px;
+    }
+}
+
+.main-nav:after {
+    clear: both;
+    content: "\00a0";
+    display: block;
+    height: 0;
+    font: 0px/0 serif;
+    overflow: hidden;
+}
+
+.nav-brand {
+    float: left;
+    margin: 0;
+}
+
+.nav-brand a {
+    display: block;
+    font-weight: normal;
+    padding: 15px 0;
+}
+
+
+#main-menu {
+    margin-top: 0px;
+    clear: both;
+}
+
+@media (min-width: 991px) {
+
+    /*
+    #main-menu {
+        clear: none;
+        float: left;
+    }
+*/
+    #main-menu {
+        clear: none;
+        float: left;
+        left: 25%;
+        position: absolute;
+        top: 7px;
+    }
+}
+
+
+/* Mobile menu toggle button */
+
+.main-menu-btn {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 30px;
+    margin: 15px 10px;
+    overflow: hidden;
+    position: relative;
+    text-indent: 29px;
+    white-space: nowrap;
+    width: 30px;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* hamburger icon */
+
+.main-menu-btn-icon,
+.main-menu-btn-icon:before,
+.main-menu-btn-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 2px;
+    width: 24px;
+    background: #ffba00;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+.main-menu-btn-icon:before {
+    content: '';
+    top: -7px;
+    left: 0;
+}
+
+.main-menu-btn-icon:after {
+    content: '';
+    top: 7px;
+    left: 0;
+}
+
+
+/* x icon */
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+    height: 0;
+    background: transparent;
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+    top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+
+#main-menu-state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/* hide the menu in mobile view */
+
+#main-menu-state:not(:checked) ~ #main-menu {
+    display: none;
+}
+
+#main-menu-state:checked ~ #main-menu {
+    display: block;
+}
+
+@media (min-width: 991px) {
+
+    /* hide the button in desktop view */
+    .main-menu-btn {
+        position: absolute;
+        top: -99999px;
+    }
+
+    /* always show the menu in desktop view */
+    #main-menu-state:not(:checked) ~ #main-menu {
+        display: block;
+    }
+}
+
+.social-menu {
+    padding-top: 17px;
+    text-align: right;
+}
+
+/*================= 1.1 Header Area END ==============*/
+/*================= 1.2 Hero Area Start ==============*/
+.banner-area {
+    background: #000 none repeat scroll 0 0;
+    height: 510px;
+    margin-bottom: 150px;
+    margin-top: 75px;
+}
+
+.banner-img {
+    margin-top: 50px;
+}
+
+.banner-items {
+    align-items: center;
+    display: flex;
+}
+
+.banner-content {
+    margin-top: -50px;
+}
+
+.banner-content > h2 {
+    border-bottom: 1px solid #fff;
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    padding-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.banner-content > h5 {
+    font-weight: 600;
+    margin-bottom: 25px
+}
+
+.theme-btn a {
+    background: #ffba00 none repeat scroll 0 0;
+    border: 1px solid #feba2d;
+    color: #000;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 8px 34px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.theme-btn a:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #000;
+    border: 1px solid #fff;
+
+}
+
+.card-item .theme-btn a:hover {
+    background: #000 none repeat scroll 0 0;
+    color: #fff;
+    border: 1px solid #000;
+
+}
+
+
+
+
+
+
+
+/*===================Card Area ==================*/
+.card-area .container {
+    max-width: 1560px;
+}
+
+.card-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-item.card-item-1 h3 {
+    color: #000000;
+    text-align: center;
+}
+
+
+.card-item.card-item-1 {
+    align-items: center;
+    border: 2px solid #696969;
+    display: flex;
+    padding: 50px 30px;
+}
+
+.card-item-1 .theme-btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.card-item {
+    display: flex;
+    justify-content: center;
+    height: 450px;
+    padding: 50px 30px;
+    width: 25%;
+}
+
+.card-area .card-items .card-item.card-item-3 {
+    align-self: center;
+    background: #ffba00 none repeat scroll 0 0;
+    height: 530px;
+    margin-top: -40px;
+    padding: 90px 30px;
+    -webkit-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 5px 14px -1px rgba(0, 0, 0, 0.7);
+}
+
+.card-item.card-item-2 {
+    background: #000 none repeat scroll 0 0;
+}
+
+.card-block h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card-text {
+    display: flex;
+    margin: 12px 0;
+}
+
+.card-text p {
+    color: #fff;
+    font-size: 19px;
+}
+
+.card-item.card-item-2 .card-text span {
+    color: #feba2d;
+}
+
+.card-text > span {
+    color: #000;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+
+.more-photos {
+    position: relative
+}
+
+.showMore-btn {
+    align-items: center;
+    color: #000;
+    display: flex;
+    font-size: 29px;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    font-weight: 700;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.showMore-btn:hover {
+    color: #000;
+
+}
+
+.card-item.card-item-3 .card-block h3,
+.card-item.card-item-3 .card-text p {
+    color: #000;
+}
+
+
+/*===================Card Area ==================*/
+
+/*================== Metus Area ===================*/
+
+.metus-area {
+    padding: 80px 0;
+}
+
+a.metus-item {
+    display: block;
+    margin-top: 40px;
+}
+
+.metus-area h2 {
+    color: #121116;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.metus-area p {
+    color: #121116;
+}
+
+.metus-img {
+    position: relative;
+}
+
+.metus-logo {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.metus-content p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.metus-img {
+    position: relative;
+}
+
+.metus-logo {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.metus-content {
+    margin: 20px 15px 25px 0;
+    min-height: 85px;
+}
+
+.client-content {
+    margin-right: 20px;
+}
+
+.metus-content p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.client-item {
+    display: flex;
+}
+
+.client-item .zoom {
+    margin-right: 20px;
+}
+
+.metus-img img {
+    width: 100%;
+}
+
+.client-content p {
+    color: #585858;
+    font-style: italic;
+}
+
+.client-content > h5 {
+    color: #585858;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/*================== Metus Area ===================*/
+
+
+
+
+
+
+
+
+
+
+footer.footer-area {
+    background: #000000 none repeat scroll 0 0;
+    padding: 50px 0 30px;
+}
+
+footer.footer-area {}
+
+.footer-menu ul li a {
+    color: #fff;
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.footer-menu ul li a:hover {
+    color: #585858;
+}
+
+.footer-flex {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-menu-2 h5 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-menu-2 a {
+    color: #585858;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+
+.footer-menu-2 a:hover {
+    color: #fff;
+}
+
+.footer-socail > li {
+    display: inline-block;
+}
+
+.copy-right {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333333;
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+
+.copy-card {
+    margin-top: 30px;
+}
+
+.copy-content > p {
+    color: #fff;
+    font-weight: 600;
+}
+
+.copy-card img {
+    border: 1px solid #d2d2d2;
+}
+
+
+
+/*    ========== 1.4 Gallary  Area Start  ============ */
+.gallary-area {
+    margin-bottom: 110px;
+}
+
+.image-gallary {
+    margin: 0 auto;
+    max-width: 1600px;
+    position: relative;
+}
+
+.image-gallary-content {
+    background: #000 none repeat scroll 0 0;
+    left: 53%;
+    margin-left: 2px;
+    max-width: 525px;
+    padding: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-gallary-items {
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+.image-gallary-items.flex-start {
+    align-items: flex-start;
+}
+
+.g-i {
+    height: auto;
+}
+
+.g-i img {
+    width: 100%;
+}
+
+.image-gallary-content > h2 {
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+}
+
+.image-gallary-content .card-text {
+    margin-top: 25px;
+}
+
+.image-gallary-content .card-text > span {
+    color: #ffba00;
+    margin-top: -4px;
+}
+
+/*    ========== 1.4 Gallary  Area End  ============ */
