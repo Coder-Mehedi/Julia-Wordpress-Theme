@@ -40,28 +40,23 @@
                     </div>
                 </div>
 
-<?php if( have_rows('footer_group','option') ): 
-    while( have_rows('footer_group','option') ): the_row(); 
-        $copyright_text = get_sub_field('copyright_text');
-             ?>
+
                 <div class="col-12">
                     <div class="copy-right">
                         <div class="copy-content">
                             <p><?php echo $copyright_text; ?></p>
                         </div>
                         <div class="copy-card">
-    <?php if( have_rows('company_logos','option') ): 
-            while( have_rows('company_logos','option') ): the_row();  ?>
-                            <a href="<?php the_sub_field('company_website_link'); ?>"><img src="<?php the_sub_field('logo'); ?>" alt="amazon"></a>
-    <?php endwhile;
-        endif; ?>
+                <?php foreach($company_website_info as $company_info): ?>
+                            <a href="<?php echo $company_info['link'] ?>">
+                                <img src="<?php echo $company_info['logo'] ?>" alt="amazon">
+                            </a>
+                <?php endforeach; ?>
                         </div>
         
                     </div>
                 </div>
 
-    <?php endwhile;
-        endif ?>
             </div>
         </div>
     </footer>

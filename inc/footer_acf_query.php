@@ -21,3 +21,21 @@ if(function_exists('acf_add_local_field_group')){
         endwhile;
     endif;
 }
+
+
+
+if( have_rows('footer_group','option') ): 
+    while( have_rows('footer_group','option') ): the_row(); 
+        $copyright_text = get_sub_field('copyright_text');
+
+        if( have_rows('company_logos','option') ): 
+            while( have_rows('company_logos','option') ): the_row();
+            $company_website_info[] = [
+                'link' => get_sub_field('company_website_link'),
+                'logo' => get_sub_field('logo')
+                ];
+            endwhile;
+           
+        endif;
+    endwhile;
+endif;
