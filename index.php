@@ -84,7 +84,8 @@
                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/gallery-10.jpg" alt="">
                 </div>
                 <div class="g-i more-photos">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img3.jpg" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img3.jpg" alt=""> -->
+                    <div></div>
                     <a href="" class="showMore-btn">Show More</a>
                 </div>
             </div>

@@ -567,7 +567,7 @@ footer.footer-area {
     height: auto;
 }
 
-.g-i img {
+.g-i img, .g-i div {
     width: 100%;
 }
 
@@ -595,9 +595,8 @@ footer.footer-area {
     background: var(--theme-color);
 }
 
-/*
 .g-i.more-photos {
-width: 400.36px;
-height: 147.06px;
-background: var(--theme-color);
-}*/
+    width: 400.36px;
+    height: 147.06px;
+    background: var(--theme-color);
+}
