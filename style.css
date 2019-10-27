@@ -19,6 +19,10 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+:root {
+    --theme-color: #ffba00;
+}
+
 .container {
     max-width: 1200px
 }
@@ -114,7 +118,7 @@ header.header-area {
     left: 2px;
     height: 2px;
     width: 24px;
-    background: #ffba00;
+    background: var(--theme-color);
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
 }
@@ -229,7 +233,7 @@ header.header-area {
 }
 
 .theme-btn a {
-    background: #ffba00 none repeat scroll 0 0;
+    background: var(--theme-color) none repeat scroll 0 0;
     border: 1px solid #feba2d;
     color: #000;
     display: inline-block;
@@ -290,7 +294,7 @@ header.header-area {
 
 .card-area .card-items .card-item.card-item-3 {
     align-self: center;
-    background: #ffba00 none repeat scroll 0 0;
+    background: var(--theme-color) none repeat scroll 0 0;
     height: 530px;
     margin-top: -40px;
     padding: 90px 30px;
@@ -580,8 +584,20 @@ footer.footer-area {
 }
 
 .image-gallary-content .card-text > span {
-    color: #ffba00;
+    color: var(--theme-color);
     margin-top: -4px;
 }
 
 /*    ========== 1.4 Gallary  Area End  ============ */
+.g-i.img-block {
+    height: 141.78px;
+    width: 214.25px;
+    background: var(--theme-color);
+}
+
+/*
+.g-i.more-photos {
+width: 400.36px;
+height: 147.06px;
+background: var(--theme-color);
+}*/

@@ -1,4 +1,6 @@
 <?php 
+
+if(function_exists('acf_add_local_field_group')){
 // Banner Section
 if( have_rows('banner_group','option') ): 
     while( have_rows('banner_group','option') ): the_row(); 
@@ -51,5 +53,4 @@ if( have_rows('services_group','option') ):
 
     endwhile;
 endif;
-
-
+}

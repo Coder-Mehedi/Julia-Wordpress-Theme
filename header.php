@@ -1,18 +1,5 @@
-<?php 
+<?php require_once 'inc/header_acf_query.php'; ?>
 
-if( have_rows('social_icon_settings','option') ): 
-    while( have_rows('social_icon_settings','option') ): the_row(); 
-        $facebook_profile_link = get_sub_field('facebook_profile_link');
-        $twitter_profile_link = get_sub_field('twitter_profile_link');
-        $instagram_profile_link = get_sub_field('instagram_profile_link');
-        $linkedin_profile_link = get_sub_field('linkedin_profile_link');
-
-        $show_in_top_header = get_sub_field('show_in_top_header');
-        $show_in_footer = get_sub_field('show_in_footer');
-    endwhile;
-endif;
-
-?>
 
 <!DOCTYPE html>
 <html class="no-js" lang="la">
@@ -38,7 +25,7 @@ endif;
                         <label class="main-menu-btn" for="main-menu-state">
                             <span class="main-menu-btn-icon"></span>
                         </label>
-                        <div class="nav-brand"><a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/logo/logo.png" alt=""></a></div>
+                        <div class="nav-brand"><a href="<?php bloginfo( 'url' ) ?>"><img src="<?php echo $site_logo['url'] ? $site_logo['url'] : ''; ?>" alt="logo"></a></div>
                         <!-- Sample menu definition -->
 
                         <?php wp_nav_menu( array(

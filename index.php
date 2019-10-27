@@ -42,7 +42,7 @@
             </div>
             <div class="image-gallary-items">
                 <div class="g-i img-block">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img1.jpg" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img1.jpg" alt=""> -->
                 </div>
                 <div class="g-i">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/gallery-1.jpg" alt="">
@@ -75,7 +75,7 @@
 
             <div class="image-gallary-items flex-start">
                 <div class="g-i img-block">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img2.jpg" alt="">
+                    <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img2.jpg" alt=""> -->
                 </div>
                 <div class="g-i">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/gallery-9.jpg" alt="">

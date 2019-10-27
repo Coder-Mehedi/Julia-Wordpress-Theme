@@ -1,33 +1,5 @@
-<?php
-if( have_rows('footer_group','option') ): 
-    while( have_rows('footer_group','option') ): the_row(); 
-        $copyright_text = get_sub_field('copyright_text');
+<?php require_once 'inc/footer_acf_query.php'; ?>
 
-        if( have_rows('company_logos','option') ): 
-            while( have_rows('company_logos','option') ): the_row(); 
-                $company_logos[] = get_sub_field('logo');
-            endwhile;
-        endif;
-
-    endwhile;
-endif;
-?>
-
-<?php 
-
-if( have_rows('social_icon_settings','option') ): 
-    while( have_rows('social_icon_settings','option') ): the_row(); 
-        $facebook_profile_link = get_sub_field('facebook_profile_link');
-        $twitter_profile_link = get_sub_field('twitter_profile_link');
-        $instagram_profile_link = get_sub_field('instagram_profile_link');
-        $linkedin_profile_link = get_sub_field('linkedin_profile_link');
-
-        $show_in_top_header = get_sub_field('show_in_top_header');
-        $show_in_footer = get_sub_field('show_in_footer');
-    endwhile;
-endif;
-
-?>
 
    <!-- ========== Footer Area Start   ============-->
     <footer class="footer-area">
@@ -36,7 +8,9 @@ endif;
                 <div class="col-12">
                     <div class="footer-flex">
                         <div class="footer-logo">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/footer-logo.png" alt="footer-logo.png">
+                        <?php if($logo_show_in_footer): ?>
+                            <img src="<?php echo $footer_logo['url']; ?>" alt="footer-logo.png">
+                        <?php endif; ?>
                         </div>
                         
                             <?php dynamic_sidebar('footer-1'); ?>
@@ -65,21 +39,29 @@ endif;
                     <?php endif; ?>
                     </div>
                 </div>
+
+<?php if( have_rows('footer_group','option') ): 
+    while( have_rows('footer_group','option') ): the_row(); 
+        $copyright_text = get_sub_field('copyright_text');
+             ?>
                 <div class="col-12">
                     <div class="copy-right">
                         <div class="copy-content">
                             <p><?php echo $copyright_text; ?></p>
                         </div>
                         <div class="copy-card">
-                    <?php if($company_logos): ?>
-                        <?php foreach($company_logos as $company_logo): ?>
-                            <a href=""><img src="<?php echo $company_logo; ?>" alt="amazon"></a>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-
+    <?php if( have_rows('company_logos','option') ): 
+            while( have_rows('company_logos','option') ): the_row();  ?>
+                            <a href="<?php the_sub_field('company_website_link'); ?>"><img src="<?php the_sub_field('logo'); ?>" alt="amazon"></a>
+    <?php endwhile;
+        endif; ?>
                         </div>
+        
                     </div>
                 </div>
+
+    <?php endwhile;
+        endif ?>
             </div>
         </div>
     </footer>
