@@ -70,12 +70,12 @@ if ( ! function_exists( 'julia_theme_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		// add_theme_support( 'custom-logo', array(
+		// 	'height'      => 250,
+		// 	'width'       => 250,
+		// 	'flex-width'  => true,
+		// 	'flex-height' => true,
+		// ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'julia_theme_setup' );
@@ -90,13 +90,6 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> true
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Manage Blog Section',
-		'menu_title'	=> 'Manage Blog Section',
-		'capability'	=> 'edit_posts',
-		'parent_slug'	=> 'edit.php?post_type=blog',
 	));
 
 }
