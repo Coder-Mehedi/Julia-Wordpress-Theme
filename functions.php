@@ -1,6 +1,6 @@
 <?php
 require_once 'inc/custom_post_type.php';
-// require_once 'inc/acf_fields.php';
+require_once 'inc/acf_fields.php';
 
 function julia_enqueue_scripts() {
 	wp_enqueue_style( 'julia-style', get_stylesheet_uri() );
