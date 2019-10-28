@@ -1,6 +1,6 @@
 <?php
 require_once 'inc/custom_post_type.php';
-require_once 'inc/acf_fields.php';
+// require_once 'inc/acf_fields.php';
 
 function julia_enqueue_scripts() {
 	wp_enqueue_style( 'julia-style', get_stylesheet_uri() );
@@ -146,7 +146,9 @@ function julia_widgets_init() {
 add_action( 'widgets_init', 'julia_widgets_init' );
 
 
+
 function hook_css() { 
+
 	$theme_color = get_field('theme_color','option');
 	?>
         <style>

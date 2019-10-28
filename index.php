@@ -1,6 +1,7 @@
 <?php require_once 'inc/acf_query.php'; ?>
 <?php get_header() ?>
 
+
     <!-- ==========Banner area start ========== -->
     <section class="banner-area">
         <div class="container">
@@ -13,7 +14,11 @@
                         <div class="banner-content">
                             <h2><?php echo $main_title ?></h2>
                             <h5><?php echo $secondary_title ?></h5>
-                            <div class="theme-btn"><a href=""><?php echo $banner_button_text ? $banner_button_text : '' ?></a></div>
+<?php if($banner_action_button_link): ?>
+    <?php $banner_action_button_link_target = $banner_action_button_link['target'] ? $banner_action_button_link['target'] : '_self'; ?>
+        <div class="theme-btn"><a href="<?php echo $banner_action_button_link['url'] ?>" target="<?php echo $banner_action_button_link_target ?>"><?php echo $banner_action_button_link['title'] ?></a>
+        </div>
+<?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -27,18 +32,13 @@
     <section class="gallary-area">
         <div class="image-gallary">
             <div class="image-gallary-content">
-                <h2>Julia Ivy</h2>
+                <h2><?php echo $head_text ? $head_text : ''; ?></h2>
+            <?php foreach($add_educationexperience as $edu_exp): ?>
                 <div class="card-text"><span><i class="fas fa-check-circle"></i></span>
-                    <p>Ph.D. Psychology & Ph.D. Management (Strategy)</p>
+                    <a href="<?php echo $edu_exp['url'] ?>"><p><?php echo $edu_exp['text']; ?></p></a>
                 </div>
-                <div class="card-text"><span><i class="fas fa-check-circle"></i></span>
-                    <p>Expert in personal strategy for multidimensional
-                        professionals</p>
-                </div>
-                <div class="card-text"><span><i class="fas fa-check-circle"></i></span>
-                    <p>Consultant for universities and businesses in
-                        crafted employment and employability</p>
-                </div>
+            <?php endforeach; ?>
+                
             </div>
             <div class="image-gallary-items">
                 <div class="g-i img-block">
@@ -86,7 +86,9 @@
                 <div class="g-i more-photos">
                     <!-- <img src="<?php echo get_template_directory_uri() ?>/assets/images/about/bg-img3.jpg" alt=""> -->
                     <div></div>
-                    <a href="" class="showMore-btn">Show More</a>
+                <?php if($show_more_button): ?>
+                    <a href="<?php echo $show_more_button['url'] ?>" target="<?php echo $show_more_button['target'] ?>" class="showMore-btn"><?php echo $show_more_button['title'] ?></a>
+                <?php endif; ?>
                 </div>
             </div>
 
@@ -103,7 +105,11 @@
                         <div class="card-item card-item-1">
                             <div class="card-block">
                                 <h3><?php echo $section_one_title ?></h3>
-                                <div class="theme-btn"><a href="<?php echo $download_button_url; ?>"><?php echo $download_button_text; ?></a></div>
+                            <?php if($download_button_link): ?>
+                                <div class="theme-btn"><a href="<?php echo $download_button_link['url']; ?>" target="<?php echo $download_button_link['target'] ?>"><?php echo $download_button_link['title']; ?></a>
+                                </div>
+                            <?php endif; ?>
+
                             </div>
                         </div>
 
@@ -155,25 +161,22 @@
             </div>
         </div>
     </section>
-
+<?php if($posts): ?>
     <!-- ========= metus Area  start =========== -->
     <section class="metus-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2 text-center">
-                    <h2>In varius <strong> metus sed</strong></h2>
-                    <p>Aliquam laoreet sem magna, sed ornare ligula maximus non. Praesent vehicula odio quam, nec finibus nisl elementum
-                        a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    <h2><?php echo $blog_section_title; ?></h2>
+                    <p><?php echo $blog_section_description; ?></p>
                 </div>
             </div>
             <div class="row">
 
-<?php 
-$blog_post = new WP_Query(['post_type' => 'blog', 'posts_per_page' => 3]);
-    if ( $blog_post->have_posts()):
-        while ($blog_post->have_posts()) : $blog_post->the_post(); ?>
 <?php $author_name = get_the_author_meta('display_name', 1) ? get_the_author_meta('display_name', 1) : get_the_author_meta('first_name', 1); ?>
 
+    <?php foreach($posts as $post): ?>
+        <?php setup_postdata( $post ); ?>
 
                 <div class="col-md-4">
                     <a href="#" class="metus-item">
@@ -205,11 +208,11 @@ $blog_post = new WP_Query(['post_type' => 'blog', 'posts_per_page' => 3]);
                         </div>
                     </a>
                 </div>
-                
-        <?php endwhile; ?>      
-    <?php endif; ?>
+
+<?php endforeach; ?>
             </div>
         </div>
     </section>
     <!-- ========= metus Area  start =========== -->
+<?php endif; ?>
 <?php get_footer() ?>
