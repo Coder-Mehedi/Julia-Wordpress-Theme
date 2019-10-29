@@ -1,7 +1,7 @@
 <?php require_once 'inc/acf_query.php'; ?>
 <?php get_header() ?>
 
-
+<?php if($banner_background && $main_title && $banner_image['url']): ?>
     <!-- ==========Banner area start ========== -->
     <section class="banner-area">
         <div class="container">
@@ -26,11 +26,13 @@
         </div>
     </section>
     <!-- ============= Banner area end =========== -->
+<?php endif; ?>
 
-
+    <?php if($head_text || $add_educationexperience): ?>
     <!-- ========= Image-gallery Area  start =========== -->
     <section class="gallary-area">
         <div class="image-gallary">
+            <?php if($add_educationexperience): ?>
             <div class="image-gallary-content">
                 <h2><?php echo $head_text ? $head_text : ''; ?></h2>
             <?php foreach($add_educationexperience as $edu_exp): ?>
@@ -91,10 +93,11 @@
                 <?php endif; ?>
                 </div>
             </div>
-
+        <?php endif; ?>
         </div>
     </section>
     <!-- ========= Image-gallery Area  End =========== -->
+<?php endif; ?>
 
     <!-- ========= Card Area  start =========== -->
     <section class="card-area">
@@ -102,6 +105,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card-items">
+                    <?php if($section_one_title): ?>
                         <div class="card-item card-item-1">
                             <div class="card-block">
                                 <h3><?php echo $section_one_title ?></h3>
@@ -112,10 +116,12 @@
 
                             </div>
                         </div>
-
+                    <?php endif; ?>
+                <?php if(!empty($section_two_title) || !empty($section_two_options)): ?>
                         <a href="<?php echo $section_two_link; ?>" class="card-item card-item-2">
                             <div class="card-block">
                                 <h3><?php echo $section_two_title; ?></h3>
+                        <?php if(!empty($section_two_options)): ?>
                             <?php foreach($section_two_options as $section_two_option): ?>
                                 <div class="card-content">
                                     <div class="card-text">
@@ -124,38 +130,43 @@
                                     </div>
                                 </div>
                             <?php endforeach; ?>
-                
+                        <?php endif; ?>
                             </div>
                         </a>
-
+                    <?php endif; ?>
+                <?php if(!empty($section_three_options) || !empty($section_three_title)): ?>
 
                         <a href="<?php echo $section_three_link; ?>" class="card-item card-item-3">
                             <div class="card-block">
                                 <h3><?php echo $section_three_title; ?></h3>
                                 <div class="card-content">
+                <?php if(!empty($section_three_options)): ?>
                     <?php foreach($section_three_options as $section_three_option): ?>
                                     <div class="card-text"><span><i class="fas fa-check-circle"></i></span>
                                         <p><?php echo $section_three_option; ?></p>
                                     </div>
                     <?php endforeach; ?>
-
+                <?php endif; ?>
                                 </div>
                             </div>
                         </a>
- 
+                <?php endif; ?>
+                <?php if(!empty($section_four_options) || !empty($section_four_title)): ?>
                         <a href="<?php echo $section_four_link; ?>" class="card-item card-item-2">
                             <div class="card-block">
-                                <h3>BUSINESSES</h3>
+                                <h3><?php echo $section_four_title; ?></h3>
                                 <div class="card-content">
+                    <?php if(!empty($section_four_options)): ?>
                         <?php foreach($section_four_options as $section_four_option): ?>
                                     <div class="card-text"><span><i class="fas fa-check-circle"></i></span>
                                         <p><?php echo $section_four_option; ?></p>
                                     </div>
-                            <?php endforeach; ?>
-                            
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                                 </div>
                             </div>
                         </a>
+                <?php endif; ?>
                     </div>
                 </div>
             </div>

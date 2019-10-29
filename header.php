@@ -25,7 +25,15 @@
                         <label class="main-menu-btn" for="main-menu-state">
                             <span class="main-menu-btn-icon"></span>
                         </label>
-                        <div class="nav-brand"><a href="<?php bloginfo( 'url' ) ?>"><img src="<?php echo $site_logo['url'] ? $site_logo['url'] : ''; ?>" alt="logo"></a></div>
+                        <div class="nav-brand">
+                            <a href="<?php bloginfo( 'url' ) ?>">
+                    <?php if(!empty($site_logo['url'])): ?>
+                            <img src="<?php echo $site_logo['url'] ? $site_logo['url'] : ''; ?>" alt="logo">
+                    <?php elseif(bloginfo( 'name' )): ?>
+                        <?php echo bloginfo( 'name' ); ?>
+                    <?php endif; ?>
+                            </a>
+                        </div>
                         <!-- Sample menu definition -->
 
                         <?php wp_nav_menu( array(

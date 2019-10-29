@@ -8,9 +8,11 @@
                 <div class="col-12">
                     <div class="footer-flex">
                         <div class="footer-logo">
-                        <?php if($logo_show_in_footer): ?>
-                            <img src="<?php echo $footer_logo['url']; ?>" alt="footer-logo.png">
+                    <?php if($logo_show_in_footer): ?>
+                        <?php if($footer_logo['url']): ?>
+                            <img src="<?php echo $footer_logo['url']; ?>" alt="footer-logo">
                         <?php endif; ?>
+                    <?php endif; ?>
                         </div>
                         
                             <?php dynamic_sidebar('footer-1'); ?>
@@ -47,11 +49,13 @@
                             <p><?php echo $copyright_text; ?></p>
                         </div>
                         <div class="copy-card">
+            <?php if(!empty($company_website_info)): ?>
                 <?php foreach($company_website_info as $company_info): ?>
-                            <a href="<?php echo $company_info['link'] ?>">
+                            <a href="<?php echo $company_info['link'] ? $company_info['link'] : '#' ?>">
                                 <img src="<?php echo $company_info['logo'] ?>" alt="amazon">
                             </a>
                 <?php endforeach; ?>
+            <?php endif; ?>
                         </div>
         
                     </div>
