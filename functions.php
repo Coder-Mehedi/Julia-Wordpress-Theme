@@ -101,8 +101,8 @@ function julia_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'julia' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s footer-menu">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 
 	register_sidebar( array(
@@ -111,8 +111,8 @@ function julia_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'julia' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s footer-menu-2">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 
 	register_sidebar( array(
@@ -121,8 +121,8 @@ function julia_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'julia' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s footer-menu-2">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 
 	register_sidebar( array(
@@ -131,8 +131,8 @@ function julia_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'julia' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s footer-menu-2">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
 	) );
 
 }
